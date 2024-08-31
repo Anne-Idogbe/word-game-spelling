@@ -1,0 +1,157 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(to right, #f0ba09, #c9580c80, #f0ba09);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+} 
+.image-area {
+    margin: 20px 0;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+
+}
+.image-area img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.alphabet-area {
+    padding-top: 25px;
+    height: 450px;
+    margin: auto;
+    background: linear-gradient(90deg, #ff8100, #ff00db);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.alphabet-area button {
+    margin: 5px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: #ffa07a;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    flex: 1 0 18%;
+    max-width: 18%;
+    min-width: 50px;
+}
+
+.alphabet-area button:hover {
+    background-color: orangered;
+    
+}
+
+.word-boxes {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.word-boxes span {
+    font-size: 2rem;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+}
+
+
+.word-boxes span.correct {
+    color: green;
+    animation: pop 0.3s ease-in-out;
+}
+
+.word-boxes span.incorrect {
+    color: red;
+    animation: shake 0.3s ease-in-out;
+}
+
+.report-area {
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+.timer {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff8100, #ff00db);
+    border: none;
+    border-radius: 10px;
+    flex: 1 0 45%;
+    max-width: 45%;
+    min-width: 100px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .alphabet-area button {
+        flex: 1 0 22%;
+        max-width: 22%;
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+    .controls button {
+        flex: 1 0 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .alphabet-area button {
+        flex: 1 0 30%;
+        max-width: 30%;
+        font-size: 1rem;
+        padding: 0.6rem;
+    }
+    .word-boxes span {
+        font-size: 1.5rem;
+    }
+    .controls button {
+        flex: 1 0 100%;
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}

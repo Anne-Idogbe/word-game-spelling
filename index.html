@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORD SPELLING GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <h1 style="margin: 0; font-size: 50px; color: orangered;">NI-KI-TA SPELLING GAME</h1>
+            <img src="./image/Anime 2.webp" style="width: 70px; border-radius: 50%;">
+            <div class="controls">
+                <button onclick="startGame()">Start</button>
+                <button onclick="stopGame()">Stop</button>
+            </div>
+        </div>
+        <div class="image-area">
+            <img id="currentImage" src="" alt="">
+        </div>
+    
+        <div class="alphabet-area">
+            <!-- Buttons for each alphabet -->
+            <button>A</button>
+            <button>B</button>
+            <button>C</button>
+            <button>D</button>
+            <button>E</button>
+            <button>F</button>
+            <button>G</button>
+            <button>H</button>
+            <button>I</button>
+            <button>J</button>
+            <button>K</button>
+            <button>L</button>
+            <button>M</button>
+            <button>N</button>
+            <button>O</button>
+            <button>P</button>
+            <button>Q</button>
+            <button>R</button>
+            <button>S</button>
+            <button>T</button>
+            <button>U</button>
+            <button>V</button>
+            <button>W</button>
+            <button>X</button>
+            <button>Y</button>
+            <button>Z</button>
+        </div>
+    
+        <div class="word-boxes" id="wordBoxes">
+            <!-- Display the word being spelled -->
+            <span id="letter1"></span>
+            <span id="letter2"></span>
+            <span id="letter3"></span>
+            <span id="letter4"></span>
+            <span id="letter5"></span>
+        </div>
+    
+        <div class="timer" id="timerDisplay">Time Left: 60s</div>
+    
+       
+    </div>
+    
+    
+    <div class="report-area" id="reportArea">
+        <!-- Report will be displayed here after the game ends -->
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
